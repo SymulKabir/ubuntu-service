@@ -7,7 +7,7 @@ This guide provides instructions on how to automatically start stopped Docker co
 1. **Create a systemd service file**  
    Open a terminal and create a new service file:
    ```bash
-   sudo nano /etc/systemd/system/start-docker-containers.service
+   sudo nano /etc/systemd/system/docker-containers-autostart.service
    ```
 
 2. **Add the following content:**
@@ -31,12 +31,12 @@ This guide provides instructions on how to automatically start stopped Docker co
 3. **Reload systemd and enable the service:**
    ```bash
    sudo systemctl daemon-reload
-   sudo systemctl enable start-docker-containers.service
+   sudo systemctl enable docker-containers-autostart.service
    ```
 
 4. **Test the service manually (optional):**
    ```bash
-   sudo systemctl start start-docker-containers.service
+   sudo systemctl start docker-containers-autostart.service
    ```
 
 5. **Reboot and check if it works:**
@@ -45,7 +45,7 @@ This guide provides instructions on how to automatically start stopped Docker co
    ```
    After reboot, check the status:
    ```bash
-   sudo systemctl status start-docker-containers.service
+   sudo systemctl status docker-containers-autostart.service
    ```
 
 This method ensures that all stopped Docker containers are started automatically whenever the Ubuntu server boots up.
