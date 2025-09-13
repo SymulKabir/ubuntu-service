@@ -2,8 +2,6 @@
 
 This guide provides instructions on how to automatically start NodeJS server when an Ubuntu server boots up.
 
-## Method 1: Using systemd Service (Recommended)
-
 1. **Create a systemd service file**  
    Open a terminal and create a new service file:
    ```bash
