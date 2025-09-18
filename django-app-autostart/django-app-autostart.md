@@ -89,8 +89,8 @@ WantedBy=multi-user.target
 
 ```bash
 systemctl daemon-reload
-systemctl enable gunicorn
-systemctl start gunicorn
+systemctl enable myApp
+systemctl start myApp
 ```
 
 ### Check status
