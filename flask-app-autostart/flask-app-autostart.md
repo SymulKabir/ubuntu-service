@@ -1,4 +1,4 @@
-### 1. Create Flask application 
+### Create Flask application 
 Go to you application folder locaiton
 ```bash
 cd /var/website/simple-api
@@ -20,14 +20,14 @@ if __name__ == "__main__":
 
 ```
 
-### 2. Install vertual environment package
+### Install vertual environment package
 
 ```bash
 sudo apt update
 sudo apt install python3-venv -y
 ```
 
-### 3. Create and activate virtual environment 
+### Create and activate virtual environment 
 
 ```bash
 python3 -m venv venv
@@ -39,18 +39,18 @@ After activation, your prompt will look like:
 (venv) root@ubuntuv24:/var/website/simple-api#
 ```
 
-### 4. Install required packages
+### Install required packages
 
 ```bash
 pip install flask 
 ```
 
-### 5. Test test the app is working
+### Test test the app is working
 
 ```bash
 python app.py
 ```
-### 6. Install and run Gunicorn
+### Install and run Gunicorn
 
 ```bash
 pip install gunicorn
@@ -64,7 +64,14 @@ OR
 ```bash
 gunicorn --workers 4 --bind 0.0.0.0:5000 app:app
 ```
-### 7. Use systemd service to keep Gunicorn running
+
+### Deactive vertual environment
+
+```bash
+deactivate
+```
+
+### Use systemd service to keep Gunicorn running
 
 ```bash
 [Unit]
